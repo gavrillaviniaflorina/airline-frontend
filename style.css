@@ -72,9 +72,9 @@ main {
     text-align: center;
     display: grid;
     grid-row-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: "africa africa africa" "nAm nAm nAm" "sAm sAm sAm " "asia asia asia" "australia australia australia" "eu eu eu ";
+    grid-template-areas: "africa africa africa africa" "nAm nAm nAm nAm" "sAm sAm sAm sAm " "asia asia asia asia" "australia australia australia australia" "eu eu eu eu";
 }
 
 .africa {
@@ -135,4 +135,32 @@ footer {
     grid-area: footer;
 }
 
-@media(min-width:720px)
+@media(min-width:720px) {
+    header {
+        grid-template-areas: "title list" "title list";
+    }
+    .intro {
+        grid-template-areas: "comp comp" "crew clients" "crew clients";
+    }
+    main {
+        grid-template-areas: "africa africa nAm nAm" "africa africa nAm nAm" "sAm sAm asia asia" "sAm sAm asia asia" "australia australia australia" "eu eu eu ";
+    }
+    .beneficii {
+        grid-template-areas: "cheap direct" "cheap direct";
+    }
+}
+
+@media(min-width:1024px) {
+    header {
+        grid-template-areas: "title list" "title list";
+    }
+    .intro {
+        grid-template-areas: "comp crew" "comp clients" "crew clients";
+    }
+    main {
+        grid-template-areas: "africa africa nAm nAm" "africa africa nAm nAm" "sAm sAm asia asia" "sAm sAm asia asia" "australia australia australia" "eu eu eu ";
+    }
+    .beneficii {
+        grid-template-areas: "cheap direct" "cheap direct";
+    }
+}
