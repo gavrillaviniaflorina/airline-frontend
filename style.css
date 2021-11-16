@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-row-gap: 15px;
+    grid-template-rows: 200px minmax(500px, 1fr) minmax(950px, 1fr) 400px 100px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "header header" "intro intro" "main main" "ben ben" "footer footer";
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "title title" "list list";
+}
+
+header h3 {
+    grid-area: title;
+    text-align: center;
+}
+
+header ul {
+    grid-area: list;
+    text-align: center;
+    list-style: none;
+}
+
+.intro {
+    grid-area: intro;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-template-areas: "comp comp" "crew crew" "clients clients";
+}
+
+.crew {
+    grid-area: crew;
+    background-image: url("img/crew.jpg");
+    background-size: cover;
+    border-radius: 50px;
+    color: white;
+}
+
+.company {
+    grid-area: comp;
+    background-image: url("img/plane.jpg");
+    background-size: cover;
+    border-radius: 50px;
+}
+
+.clients {
+    background-image: url("img/client.jpg");
+    background-size: cover;
+    border-radius: 50px;
+    grid-area: clients;
+    color: white;
+    text-align: right;
+}
+
+main {
+    grid-area: main;
+    text-align: center;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "africa africa africa" "nAm nAm nAm" "sAm sAm sAm " "asia asia asia" "australia australia australia" "eu eu eu ";
+}
+
+.africa {
+    grid-area: africa;
+    background-image: url("img/africa.jpg");
+    background-size: cover;
+}
+
+.nAmerica {
+    grid-area: nAm;
+    background-image: url("img/nAm.jpg");
+    background-size: cover;
+}
+
+.sAmerica {
+    grid-area: sAm;
+    background-image: url("img/sAm.jpg");
+    background-size: cover;
+}
+
+.asia {
+    grid-area: asia;
+    background-image: url("img/asia.jpg");
+    background-size: cover;
+}
+
+.australia {
+    grid-area: australia;
+    background-image: url("img/australia.jpg");
+    background-size: cover;
+}
+
+.europa {
+    grid-area: eu;
+    background-image: url("img/eu.jpg");
+    background-size: cover;
+}
+
+.beneficii {
+    text-align: center;
+    grid-area: ben;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "cheap cheap" "direct direct";
+}
+
+.cheap {
+    text-align: center;
+    grid-area: cheap;
+}
+
+.direct {
+    grid-area: direct;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media(min-width:720px)
