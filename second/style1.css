@@ -123,13 +123,15 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             grid-template-rows: auto;
+            grid-gap: 20px;
         }
         
         main article {
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 2px solid red;
+            border: 2px solid #ABDCFF;
+            border-radius: 20px;
         }
         
         main img {
@@ -165,5 +167,14 @@
             .period ul {
                 flex-direction: row;
                 justify-content: space-evenly;
+            }
+        }
+        
+        @media(min-width:1024px) {
+            header {
+                grid-gap: 30px;
+            }
+            .intro button {
+                margin-top: 300px;
             }
         }
