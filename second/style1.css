@@ -1,116 +1,169 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 300px minmax(300px, 1fr) 200px minmax(500px 2fr) 50px;
-    grid-template-areas: "header" "intro" "period" "main" "footer";
-}
-
-header {
-    margin-top: 30px;
-    grid-area: header;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "profile" "nav";
-}
-
-header section {
-    grid-area: profile;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.search button {
-    height: 20px;
-    margin-left: 5px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.search p {
-    padding-right: 100px;
-    border-radius: 10px;
-    background-color: violet;
-    height: 20px;
-}
-
-header img {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-}
-
-header nav {
-    grid-area: nav;
-}
-
-header ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-header li {
-    background-color: gray;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    width: 35%;
-    align-self: center;
-}
-
-.intro {
-    width: 80%;
-    margin: auto;
-    border-radius: 10px;
-    grid-area: intro;
-    text-align: center;
-    background-image: url("../second/img1/aris-vs-rome-vector-illustration-paris-11563140222plz4ybf9iy.png");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.intro h2 {
-    margin-bottom: 30px;
-}
-
-.intro p {
-    margin-bottom: 10px;
-}
-
-.intro button {
-    border-radius: 10px;
-    width: 30%;
-    align-self: center;
-    margin-bottom: 5px;
-}
-
-.period {
-    grid-area: period;
-}
-
-.period ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.period ul li {
-    background-color: yellow;
-    border-radius: 10px;
-    margin-bottom: 5px;
-}
-
-main {
-    grid-area: main;
-}
-
-footer {
-    grid-auto-flow: footer;
-}
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 300px minmax(300px, 1fr) 200px minmax(500px 2fr) 50px;
+            grid-template-areas: "header" "intro" "period" "main" "footer";
+            grid-gap: 20px;
+            font-family: 'Shippori Antique B1', sans-serif;
+        }
+        
+        header {
+            margin-top: 30px;
+            grid-area: header;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "profile" "nav";
+        }
+        
+        header h3 {
+            color: #6562FC;
+        }
+        
+        header section {
+            grid-area: profile;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .search button {
+            height: 20px;
+            margin-left: 5px;
+            text-align: center;
+            border-radius: 10px;
+            background-color: #ABDCFF;
+            border-color: #ABDCFF;
+        }
+        
+        .search p {
+            padding-right: 100px;
+            border-radius: 10px;
+            background-color: #F6F3FF;
+            height: 20px;
+        }
+        
+        header img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        
+        header nav {
+            grid-area: nav;
+        }
+        
+        header ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        header li {
+            background-color: #F6F3FF;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            width: 35%;
+            align-self: center;
+        }
+        
+        .intro {
+            width: 80%;
+            margin: auto;
+            border-radius: 10px;
+            grid-area: intro;
+            text-align: center;
+            background-image: url("../second/img1/intro1.jpg");
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .intro h2 {
+            padding-top: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .intro p {
+            margin-bottom: 10px;
+        }
+        
+        .intro button {
+            border-radius: 10px;
+            width: 30%;
+            align-self: center;
+            margin-bottom: 5px;
+            margin-top: 70px;
+            background-color: #F6F3FF;
+        }
+        
+        .period {
+            grid-area: period;
+        }
+        
+        .period ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .period ul li {
+            background-color: #F6F3FF;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+        
+        main {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: auto;
+        }
+        
+        main article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid red;
+        }
+        
+        main img {
+            width: 200px;
+        }
+        
+        main article p {
+            border-radius: 10px;
+            background-color: #ABDCFF;
+        }
+        
+        footer {
+            grid-auto-flow: footer;
+        }
+        
+        @media(min-width:720px) {
+            body {
+                grid-gap: 50px;
+            }
+            header {
+                grid-gap: 20px;
+            }
+            header ul {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+            header li {
+                width: 20%;
+            }
+            .intro button {
+                margin-top: 200px;
+            }
+            .period ul {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
